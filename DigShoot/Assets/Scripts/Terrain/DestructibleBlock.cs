@@ -25,10 +25,15 @@ public class DestructibleBlock : MonoBehaviour
         mesh = new Mesh();
         mesh.MarkDynamic();
 
+        
+
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
         meshFilter.mesh = mesh;
 
+        
+
         meshRenderer = gameObject.AddComponent<MeshRenderer>();
+        meshRenderer.shadowCastingMode = 0;
     }
 
     public void SetMaterial(Material material)
