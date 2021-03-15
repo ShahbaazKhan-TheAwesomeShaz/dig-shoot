@@ -25,6 +25,7 @@ public class DestructibleBlock : MonoBehaviour
         mesh = new Mesh();
         mesh.MarkDynamic();
 
+        gameObject.tag = "Sand";
         
 
         MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();

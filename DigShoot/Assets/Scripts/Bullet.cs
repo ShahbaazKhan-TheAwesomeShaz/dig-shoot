@@ -5,7 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
-   
+
+    Ray ray;
 
     Rigidbody rb;
 
@@ -21,6 +22,7 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         direction = transform.forward;
+        
     }
 
     void OnCollisionEnter(Collision other)
@@ -35,7 +37,9 @@ public class Bullet : MonoBehaviour
 
             var destroyPS = Instantiate(bulletDestroyPS, transform.position, Quaternion.identity);
             Destroy(destroyPS, 1f);
-            Destroy(gameObject);
+            
+            //Commented out for debug purposes
+            //Destroy(gameObject);
         }
 
     }

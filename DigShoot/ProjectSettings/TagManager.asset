@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Block
   - Enemy
+  - Explosive
+  - Sand
+  - Bullet
   layers:
   - Default
   - TransparentFX
